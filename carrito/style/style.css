@@ -1,0 +1,290 @@
+/* Estilos globales */
+/* Estilos generales */
+main {
+    flex: 1;
+    padding: 80px 20px; /* Aumenta el padding superior para dejar espacio */
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image: url('../img/laptop.png'); /* Imagen de fondo */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Fija el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la ventana */
+}
+
+/* Contenedor principal */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer quede al fondo */
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: white;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+header .buttons button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    color: #007bff;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .buttons button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Contenedor de productos */
+main {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+    padding: 80px 20px; /* Ajusta el padding para no tapar el contenido por el header fijo */
+    width: 100%;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fija 4 columnas de igual tamaÃ±o */
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-box {
+    width: 250px; /* TamaÃ±o fijo para el diseÃ±o de PC */
+    height: 250px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de pÃ¡gina */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contenedor de inicio de sesiÃ³n */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece ligeramente el fondo */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo de los campos de entrada */
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaÃ±o total */
+}
+
+/* BotÃ³n */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Enlace */
+.login-container p {
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Mensaje de error */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* Para pantallas grandes (laptop y escritorio) */
+@media (min-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para laptop */
+    }
+
+    .product-box {
+        width: 250px; /* TamaÃ±o fijo para productos */
+    }
+
+    header .logo img {
+        height: 50px; /* Logo mÃ¡s grande */
+    }
+
+    header .buttons button {
+        padding: 10px 15px; /* Botones de tamaÃ±o adecuado */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1023px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para tabletas */
+    }
+
+    .product-box {
+        width: 250px; /* Productos mÃ¡s grandes en tabletas */
+        height: 250px; /* Mantener la altura proporcional */
+    }
+
+    header .logo img {
+        height: 20px; /* Logo mÃ¡s pequeÃ±o en tabletas */
+    }
+
+    header .buttons button {
+        font-size: 9px; /* Botones mÃ¡s pequeÃ±os */
+    }
+}
+
+/* Para pantallas pequeÃ±as (mÃ³viles) */
+@media (max-width: 600px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1 columna para mÃ³viles */
+        gap: 15px; /* Aumentar el espacio entre productos */
+    }
+
+    .product-box {
+        width: 95%; /* Productos mÃ¡s grandes en mÃ³viles */
+        height: 300px; /* Aumentar altura para que se vea mÃ¡s grande */
+        padding: 25px; /* MÃ¡s espacio interno */
+        text-align: center;
+        font-size: 24px; /* Aumenta aÃºn mÃ¡s el tamaÃ±o de la fuente */
+        margin: 0 auto; /* Centrado del producto */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* AlineaciÃ³n vertical para mÃ³viles */
+        padding: 20px;
+    }
+
+    header .logo img {
+        height: 35px; /* Logo mÃ¡s pequeÃ±o en mÃ³viles */
+    }
+
+    header .buttons button {
+        width: 100%; /* Botones ocupan todo el ancho */
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding-top: 160px; /* Aumenta el padding superior para evitar que el header tape los productos */
+    }
+
+    .login-container {
+        max-width: 100%; /* Asegura que el formulario de inicio de sesiÃ³n se ajuste a la pantalla */
+    }
+}

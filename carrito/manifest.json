@@ -1,0 +1,25 @@
+{
+  "short_name": "Shop",
+  "name": "Carrito de Compras",
+  "description": "Aplicación web para gestionar tu carrito de compras.",
+  "icons": [
+    {
+      "src": "./img/logo.png",
+      "sizes": "192x1z92",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.php",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#4CAF50",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "purpose": "any",
+  "dir": "ltr"
+}
